@@ -1,2 +1,15 @@
-{% include 'menu.html' %}
+{% include 'menu.html' %} {% load static %} {% for obj in movie %}
+<h1>Welcome to Python Django</h1>
+<p>Name : {{obj.name | lower}}</p>
+<!--<img src="{% static 'image/'' %}{{obj.img}}" />-->
+
+<p>Year : {{obj.year}}</p>
+<p>Summary : {{obj.summary |default:'No data available' }}</p>
+<!--{%if obj.success %}
+<p>Movie was success</p>
+{%else%}
+<p>Movie was not success</p>
+{%endif%} -->
+{%endfor%}
+
 <h1>View</h1>
