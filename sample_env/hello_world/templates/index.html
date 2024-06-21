@@ -1,0 +1,10 @@
+{% for obj in movie %}
+<h1>Welcome to Python Django</h1>
+<p>Name : {{obj.title | lower}}</p>
+<p>Year : {{obj.year}}</p>
+<p>Summary : {{obj.summary |default:'No data available' }}</p>
+{%if obj.success %}
+<p>Movie was success</p>
+{%else%}
+<p>Movie was not success</p>
+{%endif%} {%endfor%}
